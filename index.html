@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clima</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <!-- Font Awasome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="js/scripts.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="form">
+            <h3>Verifique o clima de uma Cidade:</h3>
+            <div class="form-input-container">
+                <input type="text" placeholder="Digite o nome da cidade" id="city-input">
+                <button>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+        </div>
+        <div id="wather-data">
+            <h2>
+                <i class="fa-solid fa-location-dot"></i>
+                <spam id="city">Viadutos</spam>
+                <img src="" alt="bandeira do país" id="country" />
+            </h2>
+            <p id="id-temperature">
+                <spam>38</spam>&degC
+            </p>
+            <div id="description-containe">
+                <p id="description">Nublado</p>
+                <img src="" alt="Condições do tempo" id="weather-icon">
+            </div>
+            <div id="details-container">
+                <p id="umidity">
+                    <i class="fa-solid fa-droplet"></i>
+                    <span>48%</span>
+                </p>
+                <p id="wind">
+                    <i class="fa-solid fa-wind"></i>
+                    <span>3km/h</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
