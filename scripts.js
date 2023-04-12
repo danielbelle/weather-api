@@ -1,6 +1,6 @@
 // Variáveis e seletores
 const apiKey = "a969a817118acac33e7545ac793f7c6a";
-const apiCountryURL = "https://www.countryflagicons.com/FLAT/32/";
+const apiCountryURL = "https://www.countryflagicons.com/SHINY/32/";
 
 const cityInput = document.querySelector("#city-input");
 const searchBtn = document.querySelector("#search");
@@ -12,6 +12,8 @@ const weatherIconElement = document.querySelector("#weather-icon");
 const countryElement = document.querySelector("#country");
 const humidityElement = document.querySelector("#humidity span");
 const windElement = document.querySelector("#wind span");
+
+const weatherDataElement = document.querySelector("#weather-data");
 
 
 
@@ -29,6 +31,7 @@ const getWeatherData = async (city) => {
 const showWeatherData = async (city) => {
     const data = await getWeatherData(city);
 
+    weatherDataElement.removeAttribute("class", "hide");
     cityElement.innerText = data.name;
     tempElement.innerText = parseInt(data.main.temp);
     descElement.innerText = data.weather[0].description;
@@ -46,4 +49,16 @@ searchBtn.addEventListener("click", (e) => {
     const city = cityInput.value;
 
     showWeatherData(city);
+});
+
+cityInput.addEventListener("keypress", (e) => {
+
+    
+    if (e.code === "Enter") {
+        e.preventDefault();
+
+        const city = e.target.value;
+
+        showWeatherData(city);
+    }
 });

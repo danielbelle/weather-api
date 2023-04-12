@@ -28,7 +28,9 @@ body {
 /* FORM */
 
 .form h3 {
-    margin: 1rem
+    margin: 1rem;
+    font-size: 1.5em;
+    
 }
 
 .form-input-container {
